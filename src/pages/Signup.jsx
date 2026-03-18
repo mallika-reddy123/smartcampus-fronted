@@ -44,29 +44,35 @@ const Signup = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden p-4">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 dark:from-blue-900 dark:via-purple-900 dark:to-pink-900"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-20"></div>
+      {/* Professional background with depth */}
+      <div className="absolute inset-0 bg-[linear-gradient(140deg,#0f172a_0%,#1e293b_46%,#0b1120_100%)]"></div>
 
-      {/* Floating Shapes */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-      <div className="absolute top-40 right-10 w-72 h-72 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+      {/* Subtle pattern overlay */}
+      <div
+        className="absolute inset-0 opacity-30"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(148,163,184,0.16) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,0.16) 1px, transparent 1px)",
+          backgroundSize: "48px 48px",
+        }}
+      ></div>
+
+      {/* Soft accent lights */}
+      <div className="absolute -top-16 -left-12 w-80 h-80 bg-cyan-300/20 blur-3xl"></div>
+      <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-blue-400/15 blur-3xl"></div>
 
       <div className="w-full max-w-md relative z-10">
         {/* Logo and Title */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-white/90 backdrop-blur-lg shadow-2xl rounded-2xl mb-4 animate-bounce-slow">
-            <span className="text-2xl font-bold bg-gradient-to-br from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-white/95 backdrop-blur-lg shadow-xl rounded-2xl mb-4">
+            <span className="text-2xl font-bold bg-gradient-to-br from-slate-700 to-blue-700 bg-clip-text text-transparent">
               SC
             </span>
           </div>
-          <h1 className="text-3xl font-bold text-white mb-2 drop-shadow-lg">
+          <h1 className="text-3xl font-bold text-white mb-2 tracking-tight">
             Create Account
           </h1>
-          <p className="text-white/90 drop-shadow">
-            Join our Smart Campus platform
-          </p>
+          <p className="text-slate-200/95">Join our Smart Campus platform</p>
         </div>
 
         {/* Signup Form */}
