@@ -42,7 +42,9 @@ export const AuthProvider = ({ children }) => {
       toast.success("Account created successfully!");
       return { success: true };
     } catch (error) {
-      const message = error.response?.data?.message || "Signup failed";
+      const message =
+        error.response?.data?.message ||
+        "Unable to connect to server. Please ensure backend is running on http://localhost:5000";
       toast.error(message);
       return { success: false, message };
     }
@@ -60,7 +62,9 @@ export const AuthProvider = ({ children }) => {
       toast.success("Welcome back!");
       return { success: true };
     } catch (error) {
-      const message = error.response?.data?.message || "Login failed";
+      const message =
+        error.response?.data?.message ||
+        "Unable to connect to server. Please ensure backend is running on http://localhost:5000";
       toast.error(message);
       return { success: false, message };
     }
